@@ -1,0 +1,7 @@
+torch
+torchvision
+transformers >=4.57.1, < 4.58.0
+accelerate
+tqdm
+tokenizers
+safetensors

@@ -1,0 +1,16 @@
+[project]
+name = "comfyui-sensenova"
+description = "ComfyUI nodes for SenseNova U1.5 text-to-image generation and multi-reference image editing"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["torch", "torchvision", "transformers>=4.57.1,<4.58.0", "accelerate", "tqdm", "tokenizers", "safetensors"]
+
+[project.urls]
+Repository = "https://github.com/starsFriday/ComfyUI-SenseNova.git"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = "starsfriday"
+DisplayName = "ComfyUI-SenseNova"
+Icon = ""
+includes = []

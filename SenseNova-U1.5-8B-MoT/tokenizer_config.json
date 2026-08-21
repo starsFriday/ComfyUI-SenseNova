@@ -1,0 +1,2643 @@
+{
+  "add_bos_token": false,
+  "add_eos_token": false,
+  "add_prefix_space": false,
+  "added_tokens_decoder": {
+    "151643": {
+      "content": "<|endoftext|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151644": {
+      "content": "<|im_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151645": {
+      "content": "<|im_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151646": {
+      "content": "<|object_ref_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151647": {
+      "content": "<|object_ref_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151648": {
+      "content": "<|box_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151649": {
+      "content": "<|box_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151650": {
+      "content": "<|quad_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151651": {
+      "content": "<|quad_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151652": {
+      "content": "<|vision_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151653": {
+      "content": "<|vision_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151654": {
+      "content": "<|vision_pad|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151655": {
+      "content": "<|image_pad|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151656": {
+      "content": "<|video_pad|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151657": {
+      "content": "<tool_call>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151658": {
+      "content": "</tool_call>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151659": {
+      "content": "<|fim_prefix|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151660": {
+      "content": "<|fim_middle|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151661": {
+      "content": "<|fim_suffix|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151662": {
+      "content": "<|fim_pad|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151663": {
+      "content": "<|repo_name|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151664": {
+      "content": "<|file_sep|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151665": {
+      "content": "<tool_response>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151666": {
+      "content": "</tool_response>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151667": {
+      "content": "<think>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151668": {
+      "content": "</think>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "151669": {
+      "content": "<IMG_CONTEXT>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151670": {
+      "content": "<img>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151671": {
+      "content": "</img>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151672": {
+      "content": "<quad>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151673": {
+      "content": "</quad>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151674": {
+      "content": "<ref>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151675": {
+      "content": "</ref>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151676": {
+      "content": "<box>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151677": {
+      "content": "</box>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151678": {
+      "content": "<|action_start|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151679": {
+      "content": "<|action_end|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151680": {
+      "content": "<|plugin|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151681": {
+      "content": "<|interpreter|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151682": {
+      "content": "<FAKE_PAD_0>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151683": {
+      "content": "<FAKE_PAD_1>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151684": {
+      "content": "<FAKE_PAD_2>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151685": {
+      "content": "<FAKE_PAD_3>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151686": {
+      "content": "<FAKE_PAD_4>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151687": {
+      "content": "<FAKE_PAD_5>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151688": {
+      "content": "<FAKE_PAD_6>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151689": {
+      "content": "<FAKE_PAD_7>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151690": {
+      "content": "<FAKE_PAD_8>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151691": {
+      "content": "<FAKE_PAD_9>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151692": {
+      "content": "<FAKE_PAD_10>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151693": {
+      "content": "<FAKE_PAD_11>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151694": {
+      "content": "<FAKE_PAD_12>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151695": {
+      "content": "<FAKE_PAD_13>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151696": {
+      "content": "<FAKE_PAD_14>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151697": {
+      "content": "<FAKE_PAD_15>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151698": {
+      "content": "<FAKE_PAD_16>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151699": {
+      "content": "<FAKE_PAD_17>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151700": {
+      "content": "<FAKE_PAD_18>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151701": {
+      "content": "<FAKE_PAD_19>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151702": {
+      "content": "<FAKE_PAD_20>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151703": {
+      "content": "<FAKE_PAD_21>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151704": {
+      "content": "<FAKE_PAD_22>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151705": {
+      "content": "<FAKE_PAD_23>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151706": {
+      "content": "<FAKE_PAD_24>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151707": {
+      "content": "<FAKE_PAD_25>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151708": {
+      "content": "<FAKE_PAD_26>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151709": {
+      "content": "<FAKE_PAD_27>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151710": {
+      "content": "<FAKE_PAD_28>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151711": {
+      "content": "<FAKE_PAD_29>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151712": {
+      "content": "<FAKE_PAD_30>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151713": {
+      "content": "<FAKE_PAD_31>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151714": {
+      "content": "<FAKE_PAD_32>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151715": {
+      "content": "<FAKE_PAD_33>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151716": {
+      "content": "<FAKE_PAD_34>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151717": {
+      "content": "<FAKE_PAD_35>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151718": {
+      "content": "<FAKE_PAD_36>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151719": {
+      "content": "<FAKE_PAD_37>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151720": {
+      "content": "<FAKE_PAD_38>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151721": {
+      "content": "<FAKE_PAD_39>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151722": {
+      "content": "<FAKE_PAD_40>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151723": {
+      "content": "<FAKE_PAD_41>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151724": {
+      "content": "<FAKE_PAD_42>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151725": {
+      "content": "<FAKE_PAD_43>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151726": {
+      "content": "<FAKE_PAD_44>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151727": {
+      "content": "<FAKE_PAD_45>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151728": {
+      "content": "<FAKE_PAD_46>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151729": {
+      "content": "<FAKE_PAD_47>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151730": {
+      "content": "<FAKE_PAD_48>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151731": {
+      "content": "<FAKE_PAD_49>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151732": {
+      "content": "<FAKE_PAD_50>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151733": {
+      "content": "<FAKE_PAD_51>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151734": {
+      "content": "<FAKE_PAD_52>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151735": {
+      "content": "<FAKE_PAD_53>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151736": {
+      "content": "<FAKE_PAD_54>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151737": {
+      "content": "<FAKE_PAD_55>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151738": {
+      "content": "<FAKE_PAD_56>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151739": {
+      "content": "<FAKE_PAD_57>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151740": {
+      "content": "<FAKE_PAD_58>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151741": {
+      "content": "<FAKE_PAD_59>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151742": {
+      "content": "<FAKE_PAD_60>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151743": {
+      "content": "<FAKE_PAD_61>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151744": {
+      "content": "<FAKE_PAD_62>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151745": {
+      "content": "<FAKE_PAD_63>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151746": {
+      "content": "<FAKE_PAD_64>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151747": {
+      "content": "<FAKE_PAD_65>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151748": {
+      "content": "<FAKE_PAD_66>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151749": {
+      "content": "<FAKE_PAD_67>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151750": {
+      "content": "<FAKE_PAD_68>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151751": {
+      "content": "<FAKE_PAD_69>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151752": {
+      "content": "<FAKE_PAD_70>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151753": {
+      "content": "<FAKE_PAD_71>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151754": {
+      "content": "<FAKE_PAD_72>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151755": {
+      "content": "<FAKE_PAD_73>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151756": {
+      "content": "<FAKE_PAD_74>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151757": {
+      "content": "<FAKE_PAD_75>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151758": {
+      "content": "<FAKE_PAD_76>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151759": {
+      "content": "<FAKE_PAD_77>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151760": {
+      "content": "<FAKE_PAD_78>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151761": {
+      "content": "<FAKE_PAD_79>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151762": {
+      "content": "<FAKE_PAD_80>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151763": {
+      "content": "<FAKE_PAD_81>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151764": {
+      "content": "<FAKE_PAD_82>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151765": {
+      "content": "<FAKE_PAD_83>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151766": {
+      "content": "<FAKE_PAD_84>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151767": {
+      "content": "<FAKE_PAD_85>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151768": {
+      "content": "<FAKE_PAD_86>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151769": {
+      "content": "<FAKE_PAD_87>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151770": {
+      "content": "<FAKE_PAD_88>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151771": {
+      "content": "<FAKE_PAD_89>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151772": {
+      "content": "<FAKE_PAD_90>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151773": {
+      "content": "<FAKE_PAD_91>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151774": {
+      "content": "<FAKE_PAD_92>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151775": {
+      "content": "<FAKE_PAD_93>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151776": {
+      "content": "<FAKE_PAD_94>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151777": {
+      "content": "<FAKE_PAD_95>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151778": {
+      "content": "<FAKE_PAD_96>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151779": {
+      "content": "<FAKE_PAD_97>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151780": {
+      "content": "<FAKE_PAD_98>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151781": {
+      "content": "<FAKE_PAD_99>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151782": {
+      "content": "<FAKE_PAD_100>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151783": {
+      "content": "<FAKE_PAD_101>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151784": {
+      "content": "<FAKE_PAD_102>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151785": {
+      "content": "<FAKE_PAD_103>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151786": {
+      "content": "<FAKE_PAD_104>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151787": {
+      "content": "<FAKE_PAD_105>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151788": {
+      "content": "<FAKE_PAD_106>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151789": {
+      "content": "<FAKE_PAD_107>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151790": {
+      "content": "<FAKE_PAD_108>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151791": {
+      "content": "<FAKE_PAD_109>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151792": {
+      "content": "<FAKE_PAD_110>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151793": {
+      "content": "<FAKE_PAD_111>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151794": {
+      "content": "<FAKE_PAD_112>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151795": {
+      "content": "<FAKE_PAD_113>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151796": {
+      "content": "<FAKE_PAD_114>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151797": {
+      "content": "<FAKE_PAD_115>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151798": {
+      "content": "<FAKE_PAD_116>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151799": {
+      "content": "<FAKE_PAD_117>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151800": {
+      "content": "<FAKE_PAD_118>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151801": {
+      "content": "<FAKE_PAD_119>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151802": {
+      "content": "<FAKE_PAD_120>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151803": {
+      "content": "<FAKE_PAD_121>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151804": {
+      "content": "<FAKE_PAD_122>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151805": {
+      "content": "<FAKE_PAD_123>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151806": {
+      "content": "<FAKE_PAD_124>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151807": {
+      "content": "<FAKE_PAD_125>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151808": {
+      "content": "<FAKE_PAD_126>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151809": {
+      "content": "<FAKE_PAD_127>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151810": {
+      "content": "<FAKE_PAD_128>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151811": {
+      "content": "<FAKE_PAD_129>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151812": {
+      "content": "<FAKE_PAD_130>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151813": {
+      "content": "<FAKE_PAD_131>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151814": {
+      "content": "<FAKE_PAD_132>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151815": {
+      "content": "<FAKE_PAD_133>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151816": {
+      "content": "<FAKE_PAD_134>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151817": {
+      "content": "<FAKE_PAD_135>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151818": {
+      "content": "<FAKE_PAD_136>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151819": {
+      "content": "<FAKE_PAD_137>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151820": {
+      "content": "<FAKE_PAD_138>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151821": {
+      "content": "<FAKE_PAD_139>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151822": {
+      "content": "<FAKE_PAD_140>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151823": {
+      "content": "<FAKE_PAD_141>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151824": {
+      "content": "<FAKE_PAD_142>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151825": {
+      "content": "<FAKE_PAD_143>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151826": {
+      "content": "<FAKE_PAD_144>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151827": {
+      "content": "<FAKE_PAD_145>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151828": {
+      "content": "<FAKE_PAD_146>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151829": {
+      "content": "<FAKE_PAD_147>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151830": {
+      "content": "<FAKE_PAD_148>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151831": {
+      "content": "<FAKE_PAD_149>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151832": {
+      "content": "<FAKE_PAD_150>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151833": {
+      "content": "<FAKE_PAD_151>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151834": {
+      "content": "<FAKE_PAD_152>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151835": {
+      "content": "<FAKE_PAD_153>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151836": {
+      "content": "<FAKE_PAD_154>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151837": {
+      "content": "<FAKE_PAD_155>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151838": {
+      "content": "<FAKE_PAD_156>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151839": {
+      "content": "<FAKE_PAD_157>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151840": {
+      "content": "<FAKE_PAD_158>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151841": {
+      "content": "<FAKE_PAD_159>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151842": {
+      "content": "<FAKE_PAD_160>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151843": {
+      "content": "<FAKE_PAD_161>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151844": {
+      "content": "<FAKE_PAD_162>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151845": {
+      "content": "<FAKE_PAD_163>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151846": {
+      "content": "<FAKE_PAD_164>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151847": {
+      "content": "<FAKE_PAD_165>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151848": {
+      "content": "<FAKE_PAD_166>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151849": {
+      "content": "<FAKE_PAD_167>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151850": {
+      "content": "<FAKE_PAD_168>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151851": {
+      "content": "<FAKE_PAD_169>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151852": {
+      "content": "<FAKE_PAD_170>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151853": {
+      "content": "<FAKE_PAD_171>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151854": {
+      "content": "<FAKE_PAD_172>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151855": {
+      "content": "<FAKE_PAD_173>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151856": {
+      "content": "<FAKE_PAD_174>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151857": {
+      "content": "<FAKE_PAD_175>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151858": {
+      "content": "<FAKE_PAD_176>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151859": {
+      "content": "<FAKE_PAD_177>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151860": {
+      "content": "<FAKE_PAD_178>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151861": {
+      "content": "<FAKE_PAD_179>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151862": {
+      "content": "<FAKE_PAD_180>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151863": {
+      "content": "<FAKE_PAD_181>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151864": {
+      "content": "<FAKE_PAD_182>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151865": {
+      "content": "<FAKE_PAD_183>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151866": {
+      "content": "<FAKE_PAD_184>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151867": {
+      "content": "<FAKE_PAD_185>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151868": {
+      "content": "<FAKE_PAD_186>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151869": {
+      "content": "<FAKE_PAD_187>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151870": {
+      "content": "<FAKE_PAD_188>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151871": {
+      "content": "<FAKE_PAD_189>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151872": {
+      "content": "<FAKE_PAD_190>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151873": {
+      "content": "<FAKE_PAD_191>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151874": {
+      "content": "<FAKE_PAD_192>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151875": {
+      "content": "<FAKE_PAD_193>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151876": {
+      "content": "<FAKE_PAD_194>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151877": {
+      "content": "<FAKE_PAD_195>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151878": {
+      "content": "<FAKE_PAD_196>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151879": {
+      "content": "<FAKE_PAD_197>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151880": {
+      "content": "<FAKE_PAD_198>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151881": {
+      "content": "<FAKE_PAD_199>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151882": {
+      "content": "<FAKE_PAD_200>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151883": {
+      "content": "<FAKE_PAD_201>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151884": {
+      "content": "<FAKE_PAD_202>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151885": {
+      "content": "<FAKE_PAD_203>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151886": {
+      "content": "<FAKE_PAD_204>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151887": {
+      "content": "<FAKE_PAD_205>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151888": {
+      "content": "<FAKE_PAD_206>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151889": {
+      "content": "<FAKE_PAD_207>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151890": {
+      "content": "<FAKE_PAD_208>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151891": {
+      "content": "<FAKE_PAD_209>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151892": {
+      "content": "<FAKE_PAD_210>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151893": {
+      "content": "<FAKE_PAD_211>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151894": {
+      "content": "<FAKE_PAD_212>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151895": {
+      "content": "<FAKE_PAD_213>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151896": {
+      "content": "<FAKE_PAD_214>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151897": {
+      "content": "<FAKE_PAD_215>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151898": {
+      "content": "<FAKE_PAD_216>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151899": {
+      "content": "<FAKE_PAD_217>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151900": {
+      "content": "<FAKE_PAD_218>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151901": {
+      "content": "<FAKE_PAD_219>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151902": {
+      "content": "<FAKE_PAD_220>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151903": {
+      "content": "<FAKE_PAD_221>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151904": {
+      "content": "<FAKE_PAD_222>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151905": {
+      "content": "<FAKE_PAD_223>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151906": {
+      "content": "<FAKE_PAD_224>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151907": {
+      "content": "<FAKE_PAD_225>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151908": {
+      "content": "<FAKE_PAD_226>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151909": {
+      "content": "<FAKE_PAD_227>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151910": {
+      "content": "<FAKE_PAD_228>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151911": {
+      "content": "<FAKE_PAD_229>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151912": {
+      "content": "<FAKE_PAD_230>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151913": {
+      "content": "<FAKE_PAD_231>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151914": {
+      "content": "<FAKE_PAD_232>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151915": {
+      "content": "<FAKE_PAD_233>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151916": {
+      "content": "<FAKE_PAD_234>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151917": {
+      "content": "<FAKE_PAD_235>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151918": {
+      "content": "<FAKE_PAD_236>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151919": {
+      "content": "<FAKE_PAD_237>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151920": {
+      "content": "<FAKE_PAD_238>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151921": {
+      "content": "<FAKE_PAD_239>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151922": {
+      "content": "<FAKE_PAD_240>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151923": {
+      "content": "<FAKE_PAD_241>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151924": {
+      "content": "<FAKE_PAD_242>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151925": {
+      "content": "<FAKE_PAD_243>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151926": {
+      "content": "<FAKE_PAD_244>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151927": {
+      "content": "<FAKE_PAD_245>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151928": {
+      "content": "<FAKE_PAD_246>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151929": {
+      "content": "<FAKE_PAD_247>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151930": {
+      "content": "<FAKE_PAD_248>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151931": {
+      "content": "<FAKE_PAD_249>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151932": {
+      "content": "<FAKE_PAD_250>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151933": {
+      "content": "<FAKE_PAD_251>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151934": {
+      "content": "<FAKE_PAD_252>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "151935": {
+      "content": "<FAKE_PAD_253>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "additional_special_tokens": [
+    "<|im_start|>",
+    "<|im_end|>",
+    "<|object_ref_start|>",
+    "<|object_ref_end|>",
+    "<|box_start|>",
+    "<|box_end|>",
+    "<|quad_start|>",
+    "<|quad_end|>",
+    "<|vision_start|>",
+    "<|vision_end|>",
+    "<|vision_pad|>",
+    "<|image_pad|>",
+    "<|video_pad|>",
+    "<IMG_CONTEXT>",
+    "<img>",
+    "</img>",
+    "<quad>",
+    "</quad>",
+    "<ref>",
+    "</ref>",
+    "<box>",
+    "</box>",
+    "<|action_start|>",
+    "<|action_end|>",
+    "<|plugin|>",
+    "<|interpreter|>",
+    "<FAKE_PAD_0>",
+    "<FAKE_PAD_1>",
+    "<FAKE_PAD_2>",
+    "<FAKE_PAD_3>",
+    "<FAKE_PAD_4>",
+    "<FAKE_PAD_5>",
+    "<FAKE_PAD_6>",
+    "<FAKE_PAD_7>",
+    "<FAKE_PAD_8>",
+    "<FAKE_PAD_9>",
+    "<FAKE_PAD_10>",
+    "<FAKE_PAD_11>",
+    "<FAKE_PAD_12>",
+    "<FAKE_PAD_13>",
+    "<FAKE_PAD_14>",
+    "<FAKE_PAD_15>",
+    "<FAKE_PAD_16>",
+    "<FAKE_PAD_17>",
+    "<FAKE_PAD_18>",
+    "<FAKE_PAD_19>",
+    "<FAKE_PAD_20>",
+    "<FAKE_PAD_21>",
+    "<FAKE_PAD_22>",
+    "<FAKE_PAD_23>",
+    "<FAKE_PAD_24>",
+    "<FAKE_PAD_25>",
+    "<FAKE_PAD_26>",
+    "<FAKE_PAD_27>",
+    "<FAKE_PAD_28>",
+    "<FAKE_PAD_29>",
+    "<FAKE_PAD_30>",
+    "<FAKE_PAD_31>",
+    "<FAKE_PAD_32>",
+    "<FAKE_PAD_33>",
+    "<FAKE_PAD_34>",
+    "<FAKE_PAD_35>",
+    "<FAKE_PAD_36>",
+    "<FAKE_PAD_37>",
+    "<FAKE_PAD_38>",
+    "<FAKE_PAD_39>",
+    "<FAKE_PAD_40>",
+    "<FAKE_PAD_41>",
+    "<FAKE_PAD_42>",
+    "<FAKE_PAD_43>",
+    "<FAKE_PAD_44>",
+    "<FAKE_PAD_45>",
+    "<FAKE_PAD_46>",
+    "<FAKE_PAD_47>",
+    "<FAKE_PAD_48>",
+    "<FAKE_PAD_49>",
+    "<FAKE_PAD_50>",
+    "<FAKE_PAD_51>",
+    "<FAKE_PAD_52>",
+    "<FAKE_PAD_53>",
+    "<FAKE_PAD_54>",
+    "<FAKE_PAD_55>",
+    "<FAKE_PAD_56>",
+    "<FAKE_PAD_57>",
+    "<FAKE_PAD_58>",
+    "<FAKE_PAD_59>",
+    "<FAKE_PAD_60>",
+    "<FAKE_PAD_61>",
+    "<FAKE_PAD_62>",
+    "<FAKE_PAD_63>",
+    "<FAKE_PAD_64>",
+    "<FAKE_PAD_65>",
+    "<FAKE_PAD_66>",
+    "<FAKE_PAD_67>",
+    "<FAKE_PAD_68>",
+    "<FAKE_PAD_69>",
+    "<FAKE_PAD_70>",
+    "<FAKE_PAD_71>",
+    "<FAKE_PAD_72>",
+    "<FAKE_PAD_73>",
+    "<FAKE_PAD_74>",
+    "<FAKE_PAD_75>",
+    "<FAKE_PAD_76>",
+    "<FAKE_PAD_77>",
+    "<FAKE_PAD_78>",
+    "<FAKE_PAD_79>",
+    "<FAKE_PAD_80>",
+    "<FAKE_PAD_81>",
+    "<FAKE_PAD_82>",
+    "<FAKE_PAD_83>",
+    "<FAKE_PAD_84>",
+    "<FAKE_PAD_85>",
+    "<FAKE_PAD_86>",
+    "<FAKE_PAD_87>",
+    "<FAKE_PAD_88>",
+    "<FAKE_PAD_89>",
+    "<FAKE_PAD_90>",
+    "<FAKE_PAD_91>",
+    "<FAKE_PAD_92>",
+    "<FAKE_PAD_93>",
+    "<FAKE_PAD_94>",
+    "<FAKE_PAD_95>",
+    "<FAKE_PAD_96>",
+    "<FAKE_PAD_97>",
+    "<FAKE_PAD_98>",
+    "<FAKE_PAD_99>",
+    "<FAKE_PAD_100>",
+    "<FAKE_PAD_101>",
+    "<FAKE_PAD_102>",
+    "<FAKE_PAD_103>",
+    "<FAKE_PAD_104>",
+    "<FAKE_PAD_105>",
+    "<FAKE_PAD_106>",
+    "<FAKE_PAD_107>",
+    "<FAKE_PAD_108>",
+    "<FAKE_PAD_109>",
+    "<FAKE_PAD_110>",
+    "<FAKE_PAD_111>",
+    "<FAKE_PAD_112>",
+    "<FAKE_PAD_113>",
+    "<FAKE_PAD_114>",
+    "<FAKE_PAD_115>",
+    "<FAKE_PAD_116>",
+    "<FAKE_PAD_117>",
+    "<FAKE_PAD_118>",
+    "<FAKE_PAD_119>",
+    "<FAKE_PAD_120>",
+    "<FAKE_PAD_121>",
+    "<FAKE_PAD_122>",
+    "<FAKE_PAD_123>",
+    "<FAKE_PAD_124>",
+    "<FAKE_PAD_125>",
+    "<FAKE_PAD_126>",
+    "<FAKE_PAD_127>",
+    "<FAKE_PAD_128>",
+    "<FAKE_PAD_129>",
+    "<FAKE_PAD_130>",
+    "<FAKE_PAD_131>",
+    "<FAKE_PAD_132>",
+    "<FAKE_PAD_133>",
+    "<FAKE_PAD_134>",
+    "<FAKE_PAD_135>",
+    "<FAKE_PAD_136>",
+    "<FAKE_PAD_137>",
+    "<FAKE_PAD_138>",
+    "<FAKE_PAD_139>",
+    "<FAKE_PAD_140>",
+    "<FAKE_PAD_141>",
+    "<FAKE_PAD_142>",
+    "<FAKE_PAD_143>",
+    "<FAKE_PAD_144>",
+    "<FAKE_PAD_145>",
+    "<FAKE_PAD_146>",
+    "<FAKE_PAD_147>",
+    "<FAKE_PAD_148>",
+    "<FAKE_PAD_149>",
+    "<FAKE_PAD_150>",
+    "<FAKE_PAD_151>",
+    "<FAKE_PAD_152>",
+    "<FAKE_PAD_153>",
+    "<FAKE_PAD_154>",
+    "<FAKE_PAD_155>",
+    "<FAKE_PAD_156>",
+    "<FAKE_PAD_157>",
+    "<FAKE_PAD_158>",
+    "<FAKE_PAD_159>",
+    "<FAKE_PAD_160>",
+    "<FAKE_PAD_161>",
+    "<FAKE_PAD_162>",
+    "<FAKE_PAD_163>",
+    "<FAKE_PAD_164>",
+    "<FAKE_PAD_165>",
+    "<FAKE_PAD_166>",
+    "<FAKE_PAD_167>",
+    "<FAKE_PAD_168>",
+    "<FAKE_PAD_169>",
+    "<FAKE_PAD_170>",
+    "<FAKE_PAD_171>",
+    "<FAKE_PAD_172>",
+    "<FAKE_PAD_173>",
+    "<FAKE_PAD_174>",
+    "<FAKE_PAD_175>",
+    "<FAKE_PAD_176>",
+    "<FAKE_PAD_177>",
+    "<FAKE_PAD_178>",
+    "<FAKE_PAD_179>",
+    "<FAKE_PAD_180>",
+    "<FAKE_PAD_181>",
+    "<FAKE_PAD_182>",
+    "<FAKE_PAD_183>",
+    "<FAKE_PAD_184>",
+    "<FAKE_PAD_185>",
+    "<FAKE_PAD_186>",
+    "<FAKE_PAD_187>",
+    "<FAKE_PAD_188>",
+    "<FAKE_PAD_189>",
+    "<FAKE_PAD_190>",
+    "<FAKE_PAD_191>",
+    "<FAKE_PAD_192>",
+    "<FAKE_PAD_193>",
+    "<FAKE_PAD_194>",
+    "<FAKE_PAD_195>",
+    "<FAKE_PAD_196>",
+    "<FAKE_PAD_197>",
+    "<FAKE_PAD_198>",
+    "<FAKE_PAD_199>",
+    "<FAKE_PAD_200>",
+    "<FAKE_PAD_201>",
+    "<FAKE_PAD_202>",
+    "<FAKE_PAD_203>",
+    "<FAKE_PAD_204>",
+    "<FAKE_PAD_205>",
+    "<FAKE_PAD_206>",
+    "<FAKE_PAD_207>",
+    "<FAKE_PAD_208>",
+    "<FAKE_PAD_209>",
+    "<FAKE_PAD_210>",
+    "<FAKE_PAD_211>",
+    "<FAKE_PAD_212>",
+    "<FAKE_PAD_213>",
+    "<FAKE_PAD_214>",
+    "<FAKE_PAD_215>",
+    "<FAKE_PAD_216>",
+    "<FAKE_PAD_217>",
+    "<FAKE_PAD_218>",
+    "<FAKE_PAD_219>",
+    "<FAKE_PAD_220>",
+    "<FAKE_PAD_221>",
+    "<FAKE_PAD_222>",
+    "<FAKE_PAD_223>",
+    "<FAKE_PAD_224>",
+    "<FAKE_PAD_225>",
+    "<FAKE_PAD_226>",
+    "<FAKE_PAD_227>",
+    "<FAKE_PAD_228>",
+    "<FAKE_PAD_229>",
+    "<FAKE_PAD_230>",
+    "<FAKE_PAD_231>",
+    "<FAKE_PAD_232>",
+    "<FAKE_PAD_233>",
+    "<FAKE_PAD_234>",
+    "<FAKE_PAD_235>",
+    "<FAKE_PAD_236>",
+    "<FAKE_PAD_237>",
+    "<FAKE_PAD_238>",
+    "<FAKE_PAD_239>",
+    "<FAKE_PAD_240>",
+    "<FAKE_PAD_241>",
+    "<FAKE_PAD_242>",
+    "<FAKE_PAD_243>",
+    "<FAKE_PAD_244>",
+    "<FAKE_PAD_245>",
+    "<FAKE_PAD_246>",
+    "<FAKE_PAD_247>",
+    "<FAKE_PAD_248>",
+    "<FAKE_PAD_249>",
+    "<FAKE_PAD_250>",
+    "<FAKE_PAD_251>",
+    "<FAKE_PAD_252>",
+    "<FAKE_PAD_253>"
+  ],
+  "bos_token": null,
+  "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set content = message.content %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is defined and message.reasoning_content is not none %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in message.content %}\n                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}\n                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}",
+  "clean_up_tokenization_spaces": false,
+  "eos_token": "<|im_end|>",
+  "errors": "replace",
+  "model_max_length": 12288,
+  "pad_token": "<|endoftext|>",
+  "split_special_tokens": false,
+  "tokenizer_class": "Qwen2Tokenizer",
+  "unk_token": null
+}
