@@ -141,6 +141,30 @@ class SenseNovaU15ModelLoader(io.ComfyNode):
         return io.NodeOutput(model)
 
 
+class SenseNovaU15LoRALoader(io.ComfyNode):
+    @classmethod
+    def define_schema(cls):
+        return io.Schema(
+            node_id="SenseNovaU15LoRALoader",
+            display_name="SenseNova U1.5 LoRA Loader",
+            category="SenseNova/U1.5",
+            description="Applies a native SenseNova U1.5 LoRA to BF16, scaled-FP8, or INT8 ConvRot checkpoints.",
+            inputs=[
+                SenseNovaU15Model.Input("model"),
+                io.Combo.Input("lora_name", options=folder_paths.get_filename_list("loras"),
+                               tooltip="Put the SenseNova U1.5 .safetensors LoRA in models/loras."),
+                io.Float.Input("strength", default=1.0, min=0.0, max=2.0, step=0.05,
+                               tooltip="Use 1.0 for the official 8-step distilled LoRA."),
+            ],
+            outputs=[SenseNovaU15Model.Output(display_name="SenseNova U1.5 model")],
+        )
+
+    @classmethod
+    def execute(cls, model, lora_name, strength):
+        path = folder_paths.get_full_path_or_raise("loras", lora_name)
+        return io.NodeOutput(model.with_lora(path, strength))
+
+
 class SenseNovaU15TextToImage(io.ComfyNode):
     @classmethod
     def define_schema(cls):
@@ -170,6 +194,14 @@ class SenseNovaU15TextToImage(io.ComfyNode):
     def execute(cls, model, prompt, seed, steps, width, height, cfg, cfg_norm, timestep_shift, batch_size, low_vram):
         if model.pruned_lm_head is False:
             raise ValueError("This node is intended for the pruned SenseNova U1.5 T2I/edit checkpoint.")
+        if model.lora is not None and model.lora.steps is not None:
+            expected = (model.lora.steps, model.lora.cfg, model.lora.cfg_norm, model.lora.timestep_shift)
+            actual = (steps, cfg, cfg_norm, timestep_shift)
+            if actual != expected:
+                raise ValueError(
+                    f"This distilled SenseNova LoRA requires steps={expected[0]}, cfg={expected[1]}, "
+                    f"cfg_norm={expected[2]}, and timestep_shift={expected[3]}."
+                )
         image_size = _image_size(width, height)
 
         def generate(prefetch_count):

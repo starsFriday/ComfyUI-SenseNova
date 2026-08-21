@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-sensenova"
 description = "ComfyUI nodes for SenseNova U1.5 text-to-image generation and multi-reference image editing"
-version = "1.0.0"
+version = "1.1.0"
 license = {file = "LICENSE"}
 dependencies = ["torch", "torchvision", "transformers>=4.57.1,<4.58.0", "accelerate", "tqdm", "tokenizers", "safetensors"]
 

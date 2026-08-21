@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import copy
 import gc
-from contextlib import AbstractContextManager
+import threading
+from contextlib import AbstractContextManager, nullcontext
 from typing import Sequence
 
 import torch
@@ -11,6 +13,7 @@ from safetensors.torch import load_file
 from transformers import AutoConfig, AutoModel, AutoTokenizer
 
 from ..utils import _streaming_model
+from ...lora_runtime import SenseNovaLoRA, load_sensenova_lora
 from ...src.sensenova_u1.models.neo_unify.modeling_qwen3 import set_attn_backend
 
 
@@ -41,6 +44,9 @@ class SenseNovaU1Editing:
         self.pruned_lm_head = False
         self.quantization_format = None
         self.quant_load_info = {}
+        self.release_variant = None
+        self.lora: SenseNovaLoRA | None = None
+        self._execution_lock = threading.RLock()
 
     def load(self) -> None:
         if self.model is not None:
@@ -51,6 +57,8 @@ class SenseNovaU1Editing:
 
         state_dict = load_file(self.checkpoint)
         self.pruned_lm_head = "language_model.lm_head.weight" not in state_dict
+        patch_key = "fm_modules.vision_model_mot_gen.embeddings.patch_embedding.weight"
+        self.release_variant = "final" if state_dict[patch_key].dtype == torch.float32 else "preview"
         if self.pruned_lm_head:
             self.model.language_model.lm_head = torch.nn.Identity()
 
@@ -87,6 +95,19 @@ class SenseNovaU1Editing:
         del state_dict
         gc.collect()
 
+    def with_lora(self, path: str, strength: float = 1.0) -> SenseNovaU1Editing:
+        if self.release_variant != "final":
+            raise ValueError("The official SenseNova U1.5 8-step LoRA requires the final checkpoint, not Preview.")
+        clone = copy.copy(self)
+        clone.lora = load_sensenova_lora(path, strength)
+        clone.lora.validate_model(self.model)
+        return clone
+
+    def _lora_ctx(self) -> AbstractContextManager:
+        if self.lora is None:
+            return nullcontext()
+        return self.lora.apply(self.model, self.dtype)
+
     def _model_ctx(self, prefetch_count: int) -> AbstractContextManager:
         return _streaming_model(
             self.model,
@@ -112,41 +133,45 @@ class SenseNovaU1Editing:
         streaming_prefetch_count: int | None = 1,
         progress_callback=None,
     ) -> torch.Tensor:
-        if streaming_prefetch_count is not None:
-            with self._model_ctx(streaming_prefetch_count) as model:
-                return model.it2i_generate(
-                    self.tokenizer,
-                    prompt,
-                    list(images),
-                    image_size=image_size,
-                    cfg_scale=cfg_scale,
-                    img_cfg_scale=img_cfg_scale,
-                    cfg_norm=cfg_norm,
-                    timestep_shift=timestep_shift,
-                    cfg_interval=cfg_interval,
-                    num_steps=num_steps,
-                    batch_size=batch_size,
-                    think_mode=think_mode,
-                    seed=seed,
-                    progress_callback=progress_callback,
-                )
+        if self.lora is not None and self.lora.task == "t2i":
+            raise ValueError("The SenseNova U1.5 8-step LoRA supports text-to-image only, not image editing.")
 
-        return self.model.it2i_generate(
-            self.tokenizer,
-            prompt,
-            list(images),
-            image_size=image_size,
-            cfg_scale=cfg_scale,
-            img_cfg_scale=img_cfg_scale,
-            cfg_norm=cfg_norm,
-            timestep_shift=timestep_shift,
-            cfg_interval=cfg_interval,
-            num_steps=num_steps,
-            batch_size=batch_size,
-            think_mode=think_mode,
-            seed=seed,
-            progress_callback=progress_callback,
-        )
+        with self._execution_lock, self._lora_ctx():
+            if streaming_prefetch_count is not None:
+                with self._model_ctx(streaming_prefetch_count) as model:
+                    return model.it2i_generate(
+                        self.tokenizer,
+                        prompt,
+                        list(images),
+                        image_size=image_size,
+                        cfg_scale=cfg_scale,
+                        img_cfg_scale=img_cfg_scale,
+                        cfg_norm=cfg_norm,
+                        timestep_shift=timestep_shift,
+                        cfg_interval=cfg_interval,
+                        num_steps=num_steps,
+                        batch_size=batch_size,
+                        think_mode=think_mode,
+                        seed=seed,
+                        progress_callback=progress_callback,
+                    )
+
+            return self.model.it2i_generate(
+                self.tokenizer,
+                prompt,
+                list(images),
+                image_size=image_size,
+                cfg_scale=cfg_scale,
+                img_cfg_scale=img_cfg_scale,
+                cfg_norm=cfg_norm,
+                timestep_shift=timestep_shift,
+                cfg_interval=cfg_interval,
+                num_steps=num_steps,
+                batch_size=batch_size,
+                think_mode=think_mode,
+                seed=seed,
+                progress_callback=progress_callback,
+            )
 
     def generate(
         self,
@@ -163,9 +188,25 @@ class SenseNovaU1Editing:
         streaming_prefetch_count: int | None = 1,
         progress_callback=None,
     ) -> torch.Tensor:
-        if streaming_prefetch_count is not None:
-            with self._model_ctx(streaming_prefetch_count) as model:
-                output = model.t2i_generate(
+        with self._execution_lock, self._lora_ctx():
+            if streaming_prefetch_count is not None:
+                with self._model_ctx(streaming_prefetch_count) as model:
+                    output = model.t2i_generate(
+                        self.tokenizer,
+                        prompt,
+                        image_size=image_size,
+                        cfg_scale=cfg_scale,
+                        cfg_norm=cfg_norm,
+                        timestep_shift=timestep_shift,
+                        cfg_interval=cfg_interval,
+                        num_steps=num_steps,
+                        batch_size=batch_size,
+                        seed=seed,
+                        think_mode=think_mode,
+                        progress_callback=progress_callback,
+                    )
+            else:
+                output = self.model.t2i_generate(
                     self.tokenizer,
                     prompt,
                     image_size=image_size,
@@ -179,21 +220,6 @@ class SenseNovaU1Editing:
                     think_mode=think_mode,
                     progress_callback=progress_callback,
                 )
-        else:
-            output = self.model.t2i_generate(
-                self.tokenizer,
-                prompt,
-                image_size=image_size,
-                cfg_scale=cfg_scale,
-                cfg_norm=cfg_norm,
-                timestep_shift=timestep_shift,
-                cfg_interval=cfg_interval,
-                num_steps=num_steps,
-                batch_size=batch_size,
-                seed=seed,
-                think_mode=think_mode,
-                progress_callback=progress_callback,
-            )
         return _to_tensor(output)
 
 

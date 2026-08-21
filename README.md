@@ -1,6 +1,6 @@
 # ComfyUI-SenseNova
 
-ComfyUI custom nodes for SenseNova U1.5. The project supports text-to-image generation and single- or multi-reference image editing with pruned, single-file BF16, scaled-FP8, and INT8 ConvRot checkpoints.
+ComfyUI custom nodes for SenseNova U1.5. The project supports text-to-image generation, single- or multi-reference image editing, and the official 8-step distilled LoRA with pruned, single-file BF16, scaled-FP8, and INT8 ConvRot checkpoints.
 
 ## Installation
 
@@ -23,6 +23,9 @@ ComfyUI/models/diffusion_models/
 ├── SenseNova-U1.5-8B-MoT-pruned-bf16.safetensors
 ├── SenseNova-U1.5-8B-MoT-pruned-fp8_scaled.safetensors
 └── SenseNova-U1.5-8B-MoT-pruned-int8_convrot.safetensors
+
+ComfyUI/models/loras/
+└── SenseNova-U1.5-8B-MoT-LoRA-8step-ComfyUI.safetensors
 ```
 
 The loader validates the checkpoint format, loaded tensors, and whether any weights remain uninitialized. The current inference path requires an NVIDIA CUDA GPU. BF16 needs substantially more system memory and GPU memory than the quantized variants; enable `low_vram` unless the complete model and KV cache fit in VRAM.
@@ -30,6 +33,7 @@ The loader validates the checkpoint format, loaded tensors, and whether any weig
 ## Nodes
 
 - `SenseNova U1.5 Model Loader` loads a supported single-file checkpoint from `models/diffusion_models`.
+- `SenseNova U1.5 LoRA Loader` applies a native SenseNova LoRA from `models/loras` to any of the three checkpoint formats.
 - `SenseNova U1.5 Text to Image` runs native SenseNova text-to-image sampling.
 - `SenseNova U1.5 Image Edit` runs native single- or multi-reference image editing.
 
@@ -41,9 +45,26 @@ Sampling progress is displayed with ComfyUI's native progress bar above the node
 
 The pruned checkpoints remove `language_model.lm_head`, which is used only for text output. These nodes therefore support text-to-image generation and image editing, but not Think mode, VQA text output, or interleaved text/image output. Recommended starting settings are `steps=50`, `cfg=4.0`, and `timestep_shift=3.0`.
 
+## 8-step LoRA
+
+Download `SenseNova-U1.5-8B-MoT-LoRA-8step-ComfyUI.safetensors` from the same [model repository](https://huggingface.co/joyfox/SenseNova-U1.5-8B-MoT-FP8) and place it in `ComfyUI/models/loras`. Connect `Model Loader → LoRA Loader → Text to Image` and use:
+
+```text
+steps: 8
+cfg: 1.0
+cfg_norm: none
+timestep_shift: 3.0
+LoRA strength: 1.0
+```
+
+The adapter is applied as a low-rank residual, so it works without expanding or permanently modifying BF16, FP8, or INT8 base weights. The LoRA node also accepts the unmodified official `SenseNova-U1.5-8B-MoT-LoRA-8step.safetensors` file. The distilled adapter requires the final SenseNova U1.5 base and is not compatible with the earlier Preview checkpoint.
+
+The official 8-step LoRA is intended for text-to-image generation only. The Image Edit node rejects it rather than silently producing unsupported results. Use the base checkpoint without this LoRA for image editing.
+
 ## Example workflows
 
 - `example_workflows/U15_t2i.json`
+- `example_workflows/U15_t2i_8step_lora.json`
 - `example_workflows/U15_edit.json`
 
 The edit workflow demonstrates two dynamic reference-image inputs. After importing it, select local images in both `Load Image` nodes.
@@ -54,6 +75,6 @@ SenseNova first runs an autoregressive text/image prefix and builds a per-layer 
 
 ## Credits and license
 
-The model and original inference implementation come from [OpenSenseNova/SenseNova-U1](https://github.com/OpenSenseNova/SenseNova-U1). This project adds the ComfyUI integration and reuses ComfyUI and Comfy Kitchen model-management and quantized inference operations.
+The model, original inference implementation, and distilled adapter come from [OpenSenseNova/SenseNova-U1](https://github.com/OpenSenseNova/SenseNova-U1) and [sensenova/SenseNova-U1.5-8B-MoT-LoRAs](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT-LoRAs). This project adds the ComfyUI integration and reuses ComfyUI and Comfy Kitchen model-management and quantized inference operations.
 
 The project code is licensed under the [Apache License 2.0](LICENSE). Model weights remain subject to the license published with the corresponding model repository.

@@ -1,7 +1,7 @@
 from comfy_api.latest import ComfyExtension, io
 from typing_extensions import override
 
-from .quantized_nodes import SenseNovaU15ImageEdit, SenseNovaU15ModelLoader, SenseNovaU15TextToImage
+from .quantized_nodes import SenseNovaU15ImageEdit, SenseNovaU15LoRALoader, SenseNovaU15ModelLoader, SenseNovaU15TextToImage
 
 
 class SenseNova_SM_Extension(ComfyExtension):
@@ -9,6 +9,7 @@ class SenseNova_SM_Extension(ComfyExtension):
     async def get_node_list(self) -> list[type[io.ComfyNode]]:
         return [
             SenseNovaU15ModelLoader,
+            SenseNovaU15LoRALoader,
             SenseNovaU15TextToImage,
             SenseNovaU15ImageEdit,
         ]   
