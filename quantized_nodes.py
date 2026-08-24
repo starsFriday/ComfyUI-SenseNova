@@ -77,9 +77,7 @@ def _image_output(image):
 def _image_size(width, height):
     if not 256 <= width <= 4096 or not 256 <= height <= 4096:
         raise ValueError("SenseNova width and height must be between 256 and 4096 pixels.")
-    if width % 32 or height % 32:
-        raise ValueError("SenseNova width and height must both be multiples of 32 pixels.")
-    return width, height
+    return ((width + 16) // 32 * 32, (height + 16) // 32 * 32)
 
 
 def _progress_callback(steps):
